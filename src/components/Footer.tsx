@@ -6,14 +6,14 @@ export function Footer() {
   return (
     <footer className="mt-8 bg-burgundy-ink text-[#f6efe8]">
       <div className="container-xl py-16">
-        <div className="grid gap-12 md:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
           <div>
             <div className="mb-5">
               <Link href="/" aria-label="Triora Labs home" className="inline-block">
                 <Logo tone="light" />
               </Link>
             </div>
-            <p className="max-w-xs text-sm leading-6 text-[#d8c7c3]">
+            <p className="max-w-xs text-sm leading-6 text-[#f4efe8]/80">
               We help businesses grow through websites, applications, marketing, and conversion tracking solutions.
             </p>
             <div className="mt-5 flex gap-2">
@@ -25,7 +25,7 @@ export function Footer() {
                 <Link
                   key={label}
                   href={href}
-                  className="grid h-9 w-9 place-items-center rounded-full border border-white/10 bg-white/5 text-[0.7rem]"
+                  className="grid h-9 w-9 place-items-center rounded-full border border-white/10 bg-white/5 text-[0.7rem] transition hover:bg-white/15"
                   aria-label={label}
                 >
                   {label.slice(0, 2)}
@@ -35,11 +35,11 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.16em] text-[#c9a4a8]">Quick Links</p>
-            <ul className="space-y-2 text-sm text-[#d8c7c3]">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#f4efe8]/70">Quick Links</p>
+            <ul className="space-y-2.5 text-sm text-[#f4efe8]/85">
               {footerLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:text-white">
+                  <Link href={link.href} className="transition hover:text-white">
                     {link.label}
                   </Link>
                 </li>
@@ -48,11 +48,11 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.16em] text-[#c9a4a8]">Services</p>
-            <ul className="space-y-2 text-sm text-[#d8c7c3]">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#f4efe8]/70">Services</p>
+            <ul className="space-y-2.5 text-sm text-[#f4efe8]/85">
               {services.map((s) => (
                 <li key={s.slug}>
-                  <Link href="/services" className="hover:text-white">
+                  <Link href="/services" className="transition hover:text-white">
                     {s.title}
                   </Link>
                 </li>
@@ -61,8 +61,8 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.16em] text-[#c9a4a8]">Connect</p>
-            <ul className="space-y-2 text-sm text-[#d8c7c3]">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#f4efe8]/70">Connect</p>
+            <ul className="space-y-2.5 text-sm text-[#f4efe8]/85">
               <li>
                 <Link href={site.social.instagram} className="hover:text-white">
                   Instagram

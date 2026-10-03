@@ -72,7 +72,7 @@ export default function HomePage() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {processPreview.map((step) => (
             <article key={step.n} className="glass groove rounded-[1.6rem] p-6">
-              <p className="font-serif text-3xl text-rose">{step.n}</p>
+              <p className="font-serif text-3xl font-semibold text-burgundy/40">{step.n}</p>
               <h3 className="mt-6 text-lg font-medium">{step.title}</h3>
               <p className="mt-2 text-sm leading-6 text-muted">{step.body}</p>
             </article>

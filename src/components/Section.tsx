@@ -55,7 +55,7 @@ export function CtaBand({
       <div
         className={`${dark ? "glass-dark text-[#f7efe8]" : "glass"} groove relative overflow-hidden rounded-[2rem] px-8 py-10 sm:px-12 sm:py-12`}
       >
-        <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(201,164,168,0.35),transparent_65%)]" />
+        <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.12),transparent_65%)]" />
         <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>
             <p className={`eyebrow mb-3 ${dark ? "text-[#e8c9cc] before:bg-[#e8c9cc]" : ""}`}>Let’s build what’s next</p>

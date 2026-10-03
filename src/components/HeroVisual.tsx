@@ -1,7 +1,7 @@
 export function HeroVisual() {
   return (
     <div className="relative isolate overflow-hidden rounded-[2rem] glass groove min-h-[420px]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_40%,rgba(201,164,168,0.35),transparent_42%),radial-gradient(circle_at_40%_70%,rgba(107,44,56,0.18),transparent_45%),linear-gradient(180deg,#efe4d8,#f7f1e8)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_40%,rgba(107,44,56,0.12),transparent_48%),radial-gradient(circle_at_40%_70%,rgba(107,44,56,0.14),transparent_45%),linear-gradient(180deg,#f3ebe2,#fbf7f1)]" />
       <svg className="absolute inset-0 h-full w-full" viewBox="0 0 640 640" aria-hidden="true">
         <defs>
           <linearGradient id="ring" x1="80" y1="80" x2="560" y2="560">
