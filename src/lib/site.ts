@@ -5,23 +5,25 @@ export const site = {
   description:
     "We design and build high-performing digital experiences, then connect them to accurate conversion tracking and paid media so every click has a clear path to results.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://trioralabs.com",
-  email: "hello@trioralabs.com",
+  email: "trioralabs@gmail.com",
+  phone: "+91 7036592351",
   locale: "en_IN",
   foundingYear: 2026,
+  location: "Online / Remote • Worldwide Services",
   social: {
-    instagram: "https://instagram.com/trioralabs",
-    linkedin: "https://www.linkedin.com/company/trioralabs",
-    whatsapp: "https://wa.me/910000000000",
+    instagram: "https://instagram.com/triora_labs",
+    instagramHandle: "@triora_labs",
+    linkedin: "https://www.linkedin.com/company/triora-labs/",
+    whatsapp: "https://wa.me/917036592351",
   },
 } as const;
 
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/pricing", label: "Pricing" },
+  { href: "/students", label: "Students" },
   { href: "/work", label: "Work" },
   { href: "/about", label: "About" },
-  { href: "/process", label: "Process" },
   { href: "/courses", label: "Courses" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -85,11 +87,12 @@ export const processPreview = [
 ] as const;
 
 export const processSteps = [
-  { n: "01", title: "Discovery", body: "Understand your goals." },
-  { n: "02", title: "Strategy", body: "Create a clear plan." },
-  { n: "03", title: "Design & Build", body: "Clean execution." },
-  { n: "04", title: "Launch & Tracking", body: "Go live with proper tracking." },
-  { n: "05", title: "Optimize", body: "Continuous improvement." },
+  { n: "01", title: "Understand", body: "We learn the business, the buyer and the goal." },
+  { n: "02", title: "Plan", body: "Scope, priorities and timeline agreed upfront." },
+  { n: "03", title: "Design", body: "Interfaces shaped around clarity and intent." },
+  { n: "04", title: "Build", body: "Clean engineering with regular checkpoints." },
+  { n: "05", title: "Launch", body: "Testing, tracking and a careful release." },
+  { n: "06", title: "Support", body: "Ongoing improvements after go-live." },
 ] as const;
 
 export const principles = [
@@ -101,33 +104,35 @@ export const principles = [
 
 export const pricing = {
   student: [
-    { name: "College / Final Year Project", price: "₹4,999" },
-    { name: "College Project (Premium)", price: "₹9,999" },
-    { name: "Portfolio Website (Student)", price: "₹6,999" },
-    { name: "Portfolio Website (Pro)", price: "₹9,999" },
+    { name: "College / Final Year Project", price: "Custom Scope" },
+    { name: "College Project (Comprehensive)", price: "Tailored to Scope" },
+    { name: "Portfolio Website (Student)", price: "Project-Based" },
+    { name: "Portfolio Website (Pro)", price: "Project-Based" },
   ],
   websites: [
-    { name: "Website Starter", price: "₹19,999" },
-    { name: "Business Website", price: "₹34,999" },
-    { name: "E-commerce Website", price: "₹59,999" },
+    { name: "Website Starter", price: "Fixed Scope" },
+    { name: "Business Website", price: "Custom Scope" },
+    { name: "E-commerce Website", price: "Tailored to Scope" },
   ],
-  apps: [{ name: "Web App", price: "Starting at ₹79,999" }],
+  apps: [{ name: "Web App", price: "Milestone-Based" }],
   marketing: [
-    { name: "Meta Ads Management", price: "₹9,999 / month" },
-    { name: "Google Ads Management", price: "₹9,999 / month" },
-    { name: "Meta + Google Combo", price: "₹17,999 / month" },
+    { name: "Meta Ads Management", price: "Monthly Retainer" },
+    { name: "Google Ads Management", price: "Monthly Retainer" },
+    { name: "Meta + Google Growth Combo", price: "Monthly Retainer" },
   ],
 } as const;
 
 export const lookingFor = [
+  "Student Mini Project",
+  "Student Major Project (Final Year)",
+  "Developer Portfolio Website",
+  "ATS Resume Building",
   "Website Development",
   "Web Applications",
   "Mobile Applications",
-  "Google Ads",
-  "Meta Ads",
+  "Google & Meta Ads",
   "Meta CAPI",
-  "Student / College Project",
-  "Something else",
+  "Other Inquiry",
 ] as const;
 
 export const faqs = [

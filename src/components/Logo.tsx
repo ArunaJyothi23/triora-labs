@@ -37,17 +37,17 @@ export function Logo({
 
   if (tone === "light") {
     return (
-      <span className={`inline-flex items-center ${className}`}>
-        <span className="inline-block overflow-hidden rounded-xl border border-white/20 bg-[#e4e4e0] p-1.5 shadow-[0_6px_20px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-[1.02] hover:border-white/35">
-          <Image
-            src="/images/logo-footer.png"
-            alt="Triora Labs"
-            width={360}
-            height={180}
-            className="block h-10 sm:h-12 w-auto object-contain"
-            priority={priority}
-          />
-        </span>
+      <span
+        className={`inline-flex items-center justify-center rounded-2xl bg-[#eae4dd] px-3.5 py-1.5 shadow-[0_4px_14px_rgba(0,0,0,0.3)] border border-white/30 transition-transform duration-300 hover:scale-[1.02] ${className}`}
+      >
+        <Image
+          src="/images/logo-footer.png"
+          alt="Triora Labs"
+          width={180}
+          height={60}
+          className="block h-7 sm:h-8 w-auto object-contain"
+          priority={priority}
+        />
       </span>
     );
   }
