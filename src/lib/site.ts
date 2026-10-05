@@ -30,7 +30,6 @@ export const navLinks = [
 
 export const footerLinks = [
   ...navLinks,
-  { href: "/faq", label: "FAQ" },
 ] as const;
 
 export const services = [
