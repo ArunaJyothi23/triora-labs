@@ -38,11 +38,41 @@ export function ContactForm() {
     setWaLink(waUrl);
 
     try {
+      const accessKey =
+        process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "f432e76c-7763-41a8-85fa-6a520f5e74cc";
+
+      if (accessKey) {
+        const payload = {
+          access_key: accessKey,
+          subject: `New Inquiry: ${name} (${service})`,
+          from_name: "Triora Labs Consultation",
+          name,
+          email,
+          service,
+          timeline,
+          message,
+        };
+
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+
+        const result = await res.json();
+        if (!result.success) {
+          throw new Error(result.message || "Failed to submit form.");
+        }
+      }
+
       await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
-      });
+      }).catch(() => {});
 
       setStatus("ok");
       form.reset();
@@ -57,7 +87,7 @@ export function ContactForm() {
         } catch {
           window.location.href = waUrl;
         }
-      }, 400);
+      }, 500);
     } catch {
       setStatus("error");
     }
@@ -78,6 +108,9 @@ export function ContactForm() {
       </div>
 
       <form onSubmit={onSubmit} className="space-y-3.5">
+        {/* Anti-spam honeypot */}
+        <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+
         {/* Row 1: Name & Email */}
         <div className="grid gap-3.5 sm:grid-cols-2">
           <label className="block">

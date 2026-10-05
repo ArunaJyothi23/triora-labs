@@ -37,15 +37,13 @@ export function Logo({
 
   if (tone === "light") {
     return (
-      <span
-        className={`inline-flex items-center justify-center rounded-2xl bg-[#eae4dd] px-3.5 py-1.5 shadow-[0_4px_14px_rgba(0,0,0,0.3)] border border-white/30 transition-transform duration-300 hover:scale-[1.02] ${className}`}
-      >
+      <span className={`inline-flex items-center ${className}`}>
         <Image
-          src="/images/logo-footer.png"
+          src="/images/logo.png"
           alt="Triora Labs"
-          width={180}
-          height={60}
-          className="block h-7 sm:h-8 w-auto object-contain"
+          width={280}
+          height={140}
+          className="block h-8 sm:h-9 w-auto object-contain brightness-0 invert opacity-95 transition-transform duration-300 hover:scale-[1.03]"
           priority={priority}
         />
       </span>

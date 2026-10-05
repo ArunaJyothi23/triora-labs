@@ -1,7 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
+import { CountUp } from "@/components/CountUp";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { HeroVisual } from "@/components/HeroVisual";
+import { ReviewsMarquee } from "@/components/ReviewsMarquee";
 import { processSteps, site } from "@/lib/site";
 
 export default function HomePage() {
@@ -122,7 +125,9 @@ export default function HomePage() {
         <div className="glass groove grid gap-6 rounded-[2.2rem] p-6 sm:grid-cols-2 lg:grid-cols-4 sm:p-8">
           <div className="border-b border-burgundy/10 pb-4 sm:border-b-0 sm:border-r sm:pb-0 sm:pr-4">
             <div className="flex items-center gap-2">
-              <span className="font-serif text-2xl font-bold text-burgundy">01</span>
+              <span className="font-serif text-2xl font-bold text-burgundy">
+                <CountUp end={1} prefix="0" />
+              </span>
               <span className="text-[11px] uppercase tracking-widest font-semibold text-muted">Engineering</span>
             </div>
             <p className="mt-2 font-semibold text-ink text-base">Bespoke Full-Stack Builds</p>
@@ -132,7 +137,9 @@ export default function HomePage() {
           </div>
           <div className="border-b border-burgundy/10 pb-4 sm:border-b-0 lg:border-r sm:pb-0 sm:pr-4">
             <div className="flex items-center gap-2">
-              <span className="font-serif text-2xl font-bold text-burgundy">02</span>
+              <span className="font-serif text-2xl font-bold text-burgundy">
+                <CountUp end={2} prefix="0" />
+              </span>
               <span className="text-[11px] uppercase tracking-widest font-semibold text-muted">Design</span>
             </div>
             <p className="mt-2 font-semibold text-ink text-base">Conversion Architecture</p>
@@ -142,7 +149,9 @@ export default function HomePage() {
           </div>
           <div className="border-b border-burgundy/10 pb-4 sm:border-b-0 sm:border-r sm:pb-0 sm:pr-4">
             <div className="flex items-center gap-2">
-              <span className="font-serif text-2xl font-bold text-burgundy">03</span>
+              <span className="font-serif text-2xl font-bold text-burgundy">
+                <CountUp end={3} prefix="0" />
+              </span>
               <span className="text-[11px] uppercase tracking-widest font-semibold text-muted">Attribution</span>
             </div>
             <p className="mt-2 font-semibold text-ink text-base">Server-Side Meta CAPI</p>
@@ -152,7 +161,9 @@ export default function HomePage() {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-serif text-2xl font-bold text-burgundy">04</span>
+              <span className="font-serif text-2xl font-bold text-burgundy">
+                <CountUp end={4} prefix="0" />
+              </span>
               <span className="text-[11px] uppercase tracking-widest font-semibold text-muted">Partnership</span>
             </div>
             <p className="mt-2 font-semibold text-ink text-base">Direct Founder Access</p>
@@ -355,83 +366,116 @@ export default function HomePage() {
 
         <div className="grid gap-6 md:grid-cols-3">
           {/* Project 1 */}
-          <article className="glass groove group overflow-hidden rounded-[2rem] p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-            <div className="aspect-[16/10] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[#5a2430] to-[#240e14] p-5 text-white flex flex-col justify-between shadow-inner">
-              <div className="flex justify-between items-center text-xs">
-                <span className="rounded-full bg-white/15 px-2.5 py-1 font-mono text-[10px]">auracommerce.com</span>
-                <span className="text-white/80 text-[11px] font-medium">Next.js D2C</span>
+          <article className="glass groove group overflow-hidden rounded-[2rem] p-5 sm:p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 flex flex-col justify-between">
+            <div>
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-[#1a0c10] shadow-md">
+                <Image
+                  src="/images/work/ecommerce-v2.jpg"
+                  alt="Aura Commerce luxury storefront mockup"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+                <div className="absolute top-3 right-3">
+                  <span className="rounded-full bg-burgundy/85 backdrop-blur-md px-3 py-1 text-[10px] font-semibold text-white shadow-sm border border-white/20">
+                    Next.js D2C
+                  </span>
+                </div>
+                <div className="absolute bottom-3 left-3 right-3">
+                  <p className="text-xl font-serif font-bold text-white drop-shadow-md">Aura Commerce</p>
+                  <p className="text-[11px] text-white/90 drop-shadow-sm">Direct-to-Consumer Luxury Platform</p>
+                </div>
               </div>
-              <div>
-                <p className="text-2xl font-serif font-bold">Aura Commerce</p>
-                <p className="text-xs text-white/80 mt-1">Direct-to-Consumer Luxury Platform</p>
+              <div className="mt-5">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-semibold text-burgundy uppercase tracking-wider">
+                    Core Architecture
+                  </span>
+                  <span className="text-xs font-bold text-burgundy bg-burgundy/8 border border-burgundy/15 px-2.5 py-0.5 rounded-full">
+                    Edge SSR & Cart API
+                  </span>
+                </div>
+                <p className="mt-2.5 text-sm text-muted leading-relaxed">
+                  Bespoke editorial storefront with sub-second page transitions, dynamic currency, and server-side tracking.
+                </p>
               </div>
-            </div>
-            <div className="mt-5">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-burgundy uppercase tracking-wider">
-                  Core Architecture
-                </span>
-                <span className="text-xs font-bold text-burgundy bg-burgundy/8 border border-burgundy/15 px-2.5 py-0.5 rounded-full">
-                  Edge SSR & Cart API
-                </span>
-              </div>
-              <p className="mt-2 text-sm text-muted">
-                Bespoke editorial storefront with sub-second page transitions, dynamic currency, and server-side tracking.
-              </p>
             </div>
           </article>
 
           {/* Project 2 */}
-          <article className="glass groove group overflow-hidden rounded-[2rem] p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-            <div className="aspect-[16/10] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[#1e293b] to-[#0f172a] p-5 text-white flex flex-col justify-between shadow-inner">
-              <div className="flex justify-between items-center text-xs">
-                <span className="rounded-full bg-white/15 px-2.5 py-1 font-mono text-[10px]">finpulse.io</span>
-                <span className="text-white/80 text-[11px] font-medium">SaaS Platform</span>
+          <article className="glass groove group overflow-hidden rounded-[2rem] p-5 sm:p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 flex flex-col justify-between">
+            <div>
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-[#0f172a] shadow-md">
+                <Image
+                  src="/images/work/visha-it-v2.jpg"
+                  alt="FinPulse Analytics dashboard mockup"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+                <div className="absolute top-3 right-3">
+                  <span className="rounded-full bg-burgundy/85 backdrop-blur-md px-3 py-1 text-[10px] font-semibold text-white shadow-sm border border-white/20">
+                    SaaS Platform
+                  </span>
+                </div>
+                <div className="absolute bottom-3 left-3 right-3">
+                  <p className="text-xl font-serif font-bold text-white drop-shadow-md">FinPulse Analytics</p>
+                  <p className="text-[11px] text-white/90 drop-shadow-sm">Real-time Financial Intelligence</p>
+                </div>
               </div>
-              <div>
-                <p className="text-2xl font-serif font-bold">FinPulse Analytics</p>
-                <p className="text-xs text-white/80 mt-1">Real-time Financial Intelligence</p>
+              <div className="mt-5">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-semibold text-burgundy uppercase tracking-wider">
+                    Core Architecture
+                  </span>
+                  <span className="text-xs font-bold text-burgundy bg-burgundy/8 border border-burgundy/15 px-2.5 py-0.5 rounded-full">
+                    WebSocket & Postgres
+                  </span>
+                </div>
+                <p className="mt-2.5 text-sm text-muted leading-relaxed">
+                  High-concurrency data dashboard with interactive visualizations, automated alert triggers, and sub-50ms query latency.
+                </p>
               </div>
-            </div>
-            <div className="mt-5">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-burgundy uppercase tracking-wider">
-                  Core Architecture
-                </span>
-                <span className="text-xs font-bold text-burgundy bg-burgundy/8 border border-burgundy/15 px-2.5 py-0.5 rounded-full">
-                  WebSocket & Postgres
-                </span>
-              </div>
-              <p className="mt-2 text-sm text-muted">
-                High-concurrency data dashboard with interactive visualizations, automated alert triggers, and sub-50ms query latency.
-              </p>
             </div>
           </article>
 
           {/* Project 3 */}
-          <article className="glass groove group overflow-hidden rounded-[2rem] p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-            <div className="aspect-[16/10] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[#4a1c26] to-[#1a080d] p-5 text-white flex flex-col justify-between shadow-inner">
-              <div className="flex justify-between items-center text-xs">
-                <span className="rounded-full bg-white/15 px-2.5 py-1 font-mono text-[10px]">velocescale.com</span>
-                <span className="text-white/80 text-[11px] font-medium">Attribution Engine</span>
+          <article className="glass groove group overflow-hidden rounded-[2rem] p-5 sm:p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 flex flex-col justify-between">
+            <div>
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-[#1a080d] shadow-md">
+                <Image
+                  src="/images/work/real-estate.jpg"
+                  alt="Veloce Scale attribution engine mockup"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+                <div className="absolute top-3 right-3">
+                  <span className="rounded-full bg-burgundy/85 backdrop-blur-md px-3 py-1 text-[10px] font-semibold text-white shadow-sm border border-white/20">
+                    Attribution Engine
+                  </span>
+                </div>
+                <div className="absolute bottom-3 left-3 right-3">
+                  <p className="text-xl font-serif font-bold text-white drop-shadow-md">Veloce Scale</p>
+                  <p className="text-[11px] text-white/90 drop-shadow-sm">Multi-Channel Ad Attribution</p>
+                </div>
               </div>
-              <div>
-                <p className="text-2xl font-serif font-bold">Veloce Scale</p>
-                <p className="text-xs text-white/80 mt-1">Multi-Channel Ad Attribution</p>
+              <div className="mt-5">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-semibold text-burgundy uppercase tracking-wider">
+                    Core Architecture
+                  </span>
+                  <span className="text-xs font-bold text-burgundy bg-burgundy/8 border border-burgundy/15 px-2.5 py-0.5 rounded-full">
+                    Meta CAPI Pipeline
+                  </span>
+                </div>
+                <p className="mt-2.5 text-sm text-muted leading-relaxed">
+                  Engineered server-to-server tracking pipeline connecting Meta & Google Ads for unified attribution and higher signal quality.
+                </p>
               </div>
-            </div>
-            <div className="mt-5">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-burgundy uppercase tracking-wider">
-                  Core Architecture
-                </span>
-                <span className="text-xs font-bold text-burgundy bg-burgundy/8 border border-burgundy/15 px-2.5 py-0.5 rounded-full">
-                  Meta CAPI Pipeline
-                </span>
-              </div>
-              <p className="mt-2 text-sm text-muted">
-                Engineered server-to-server tracking pipeline connecting Meta & Google Ads for unified attribution and higher signal quality.
-              </p>
             </div>
           </article>
         </div>
@@ -466,69 +510,9 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
-          7. FOUNDER TESTIMONIALS & TRUST
+          7. FOUNDER & CLIENT REVIEWS MARQUEE (TELUGU FOUNDERS & VERIFIED RESULTS)
       ───────────────────────────────────────────────────────────── */}
-      <section className="container-xl py-12">
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <p className="eyebrow mb-3 justify-center">Client Endorsements</p>
-          <h2 className="display text-4xl sm:text-5xl">Built on Trust, Delivered on Speed.</h2>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-3">
-          <div className="glass groove rounded-[2rem] p-7">
-            <div className="flex text-amber-500 text-sm mb-4">★★★★★</div>
-            <p className="text-sm leading-relaxed text-ink italic">
-              &quot;Triora Labs delivered our website and web application ahead of schedule. The site
-              feels insanely fast and our lead conversion rate shot up by 180% within the first
-              month.&quot;
-            </p>
-            <div className="mt-6 flex items-center gap-3 border-t border-burgundy/10 pt-4">
-              <div className="grid h-9 w-9 place-items-center rounded-full bg-burgundy/10 text-burgundy font-bold text-xs">
-                AR
-              </div>
-              <div>
-                <p className="text-xs font-bold text-ink">Aditya Rao</p>
-                <p className="text-[11px] text-muted">Founder, SaaS Commerce</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="glass groove rounded-[2rem] p-7">
-            <div className="flex text-amber-500 text-sm mb-4">★★★★★</div>
-            <p className="text-sm leading-relaxed text-ink italic">
-              &quot;Setting up Meta CAPI with Triora Labs was a game changer for our ad spend. We
-              finally have accurate data reporting, and our ROAS climbed significantly.&quot;
-            </p>
-            <div className="mt-6 flex items-center gap-3 border-t border-burgundy/10 pt-4">
-              <div className="grid h-9 w-9 place-items-center rounded-full bg-burgundy/10 text-burgundy font-bold text-xs">
-                SM
-              </div>
-              <div>
-                <p className="text-xs font-bold text-ink">Sneha Mehta</p>
-                <p className="text-[11px] text-muted">Growth Director, Retail Brand</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="glass groove rounded-[2rem] p-7">
-            <div className="flex text-amber-500 text-sm mb-4">★★★★★</div>
-            <p className="text-sm leading-relaxed text-ink italic">
-              &quot;As an engineering student, their final-year project guidance was exceptional. The
-              code quality, documentation, and live deployment gave me immense confidence in my
-              viva.&quot;
-            </p>
-            <div className="mt-6 flex items-center gap-3 border-t border-burgundy/10 pt-4">
-              <div className="grid h-9 w-9 place-items-center rounded-full bg-burgundy/10 text-burgundy font-bold text-xs">
-                VP
-              </div>
-              <div>
-                <p className="text-xs font-bold text-ink">Vikram Patel</p>
-                <p className="text-[11px] text-muted">B.Tech CSE Graduate</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ReviewsMarquee />
 
       {/* ─────────────────────────────────────────────────────────────
           8. CUSTOM PROJECT SCOPES (ZERO PRICES REVEALED)
@@ -627,18 +611,20 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+            <div className="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto shrink-0">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-base font-semibold text-burgundy shadow-lg transition-all duration-200 hover:bg-white/90 hover:scale-105 text-center"
+                prefetch={true}
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-white px-8 py-4 text-base font-bold text-burgundy shadow-xl transition-all duration-200 hover:bg-white/95 hover:scale-[1.03] active:scale-95 shrink-0"
               >
-                Start Your Project ↗
+                <span>Start Your Project</span>
+                <span className="ml-2 text-lg">↗</span>
               </Link>
               <Link
                 href={site.social.whatsapp}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3.5 text-base font-medium text-white transition hover:bg-white/20 text-center"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/30 bg-white/10 px-7 py-4 text-base font-medium text-white backdrop-blur-md transition-all duration-200 hover:bg-white/20 active:scale-95 shrink-0"
               >
                 Chat on WhatsApp
               </Link>

@@ -6,10 +6,9 @@ export function HeroVisual() {
   const navItems = [
     { label: "Home", active: true },
     { label: "Services", active: false },
-    { label: "Pricing", active: false },
+    { label: "Students", active: false },
     { label: "Work", active: false },
     { label: "About", active: false },
-    { label: "Process", active: false },
     { label: "Courses", active: false },
     { label: "Contact", active: false },
   ];

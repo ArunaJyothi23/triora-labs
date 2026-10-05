@@ -57,7 +57,7 @@ const studentOfferings = [
       "Interactive project showcases linked to live demos & GitHub",
       "Ultra-fast loading speed with Core Web Vitals optimization",
       "Custom contact form routing leads to your email & WhatsApp",
-      "Custom domain setup (yourname.dev or yourname.com)",
+      "Custom domain & cloud hosting setup with SSL",
     ],
     ctaText: "Build My Portfolio",
     badge: "Hiring Magnet",

@@ -3,6 +3,7 @@ import { Outfit, Fraunces } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
+import { NavigationProgressBar } from "@/components/NavigationProgressBar";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -87,6 +88,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         >
           Skip to content
         </a>
+        <NavigationProgressBar />
         <JsonLd />
         <Header />
         <main id="main">{children}</main>

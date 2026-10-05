@@ -58,36 +58,26 @@
   color: #ffffff !important;
 }
 
-body::before {
-  content: "";
-  pointer-events: none;
-  position: fixed;
-  inset: 0;
-  z-index: 80;
-  opacity: 0.025;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
 ::selection {
   background: rgba(107, 44, 56, 0.2);
 }
 
 .glass {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 250, 245, 0.55) 100%);
-  backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 250, 245, 0.65) 100%);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
   border: 1px solid rgba(255, 255, 255, 0.75);
   box-shadow:
     inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.95),
     inset 0 -12px 24px rgba(90, 36, 46, 0.03),
-    0 16px 36px -4px rgba(42, 18, 24, 0.07),
-    0 2px 8px rgba(42, 18, 24, 0.03);
+    0 16px 36px -4px rgba(42, 18, 24, 0.06),
+    0 2px 8px rgba(42, 18, 24, 0.02);
 }
 
 .glass-dark {
-  background: linear-gradient(145deg, rgba(92, 32, 44, 0.95), rgba(42, 14, 21, 0.98));
-  backdrop-filter: blur(24px) saturate(160%);
-  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  background: linear-gradient(145deg, rgba(92, 32, 44, 0.96), rgba(42, 14, 21, 0.98));
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
   border: 1px solid rgba(255, 255, 255, 0.16);
   box-shadow:
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
@@ -203,25 +193,46 @@ body::before {
   animation: shimmer 6s infinite linear;
 }
 
-/* Marquee Auto-Scrolling */
+/* Marquee Auto-Scrolling (GPU-accelerated with translate3d) */
 @keyframes marquee {
   0% {
-    transform: translateX(0%);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
   }
 }
 
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 28s linear infinite;
+  will-change: transform;
+  animation: marquee 24s linear infinite;
 }
 
-.animate-marquee:hover {
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-reverse 34s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-reverse:hover,
+.group:hover .animate-marquee,
+.group:hover .animate-marquee-reverse {
   animation-play-state: paused;
 }
+
 
 /* 3D Bent Device Perspective */
 .device-bend-perspective {

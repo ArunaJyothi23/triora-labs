@@ -22,10 +22,11 @@ export function ButtonLink({ href = "/contact", children, variant = "primary", c
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-[0.92rem] font-medium transition duration-200 ${styles[variant]} ${className}`}
+      prefetch={true}
+      className={`inline-flex items-center justify-center whitespace-nowrap gap-2 rounded-full px-6 py-3 text-[0.92rem] font-semibold transition duration-200 shrink-0 ${styles[variant]} ${className}`}
       style={variant === "primary" ? { color: "#ffffff" } : undefined}
     >
-      {children}
+      <span>{children}</span>
       <span aria-hidden className="text-sm">↗</span>
     </Link>
   );
