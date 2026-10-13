@@ -58,7 +58,7 @@ export function CtaBand({
         <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.12),transparent_65%)]" />
         <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>
-            <p className={`eyebrow mb-3 ${dark ? "text-[#e8c9cc] before:bg-[#e8c9cc]" : ""}`}>Let’s build what’s next</p>
+            <p className={`eyebrow mb-3 ${dark ? "eyebrow-light !text-[#fce7cf]" : ""}`}>Let’s build what’s next</p>
             <h2 className="display max-w-xl text-3xl sm:text-5xl">{title}</h2>
             {body ? <p className={`mt-3 max-w-xl text-sm leading-6 ${dark ? "text-[#d8c7c3]" : "text-muted"}`}>{body}</p> : null}
           </div>

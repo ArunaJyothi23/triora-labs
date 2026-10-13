@@ -364,116 +364,76 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {/* Project 1 */}
+        <div className="grid gap-6 md:grid-cols-2">
+          {/* Project 1: Visha IT Solutions */}
           <article className="glass groove group overflow-hidden rounded-[2rem] p-5 sm:p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 flex flex-col justify-between">
             <div>
-              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-[#1a0c10] shadow-md">
-                <Image
-                  src="/images/work/ecommerce-v2.jpg"
-                  alt="Aura Commerce luxury storefront mockup"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
-                <div className="absolute top-3 right-3">
-                  <span className="rounded-full bg-burgundy/85 backdrop-blur-md px-3 py-1 text-[10px] font-semibold text-white shadow-sm border border-white/20">
-                    Next.js D2C
-                  </span>
-                </div>
-                <div className="absolute bottom-3 left-3 right-3">
-                  <p className="text-xl font-serif font-bold text-white drop-shadow-md">Aura Commerce</p>
-                  <p className="text-[11px] text-white/90 drop-shadow-sm">Direct-to-Consumer Luxury Platform</p>
-                </div>
-              </div>
-              <div className="mt-5">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold text-burgundy uppercase tracking-wider">
-                    Core Architecture
-                  </span>
-                  <span className="text-xs font-bold text-burgundy bg-burgundy/8 border border-burgundy/15 px-2.5 py-0.5 rounded-full">
-                    Edge SSR & Cart API
-                  </span>
-                </div>
-                <p className="mt-2.5 text-sm text-muted leading-relaxed">
-                  Bespoke editorial storefront with sub-second page transitions, dynamic currency, and server-side tracking.
-                </p>
-              </div>
-            </div>
-          </article>
-
-          {/* Project 2 */}
-          <article className="glass groove group overflow-hidden rounded-[2rem] p-5 sm:p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 flex flex-col justify-between">
-            <div>
-              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-[#0f172a] shadow-md">
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-white border border-burgundy/15 p-1.5 sm:p-2.5 shadow-sm">
                 <Image
                   src="/images/work/visha-it-v2.jpg"
-                  alt="FinPulse Analytics dashboard mockup"
+                  alt="Visha IT Solutions recruitment and staffing platform"
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-contain object-center transition-transform duration-500 group-hover:scale-[1.01]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
-                <div className="absolute top-3 right-3">
-                  <span className="rounded-full bg-burgundy/85 backdrop-blur-md px-3 py-1 text-[10px] font-semibold text-white shadow-sm border border-white/20">
-                    SaaS Platform
-                  </span>
-                </div>
-                <div className="absolute bottom-3 left-3 right-3">
-                  <p className="text-xl font-serif font-bold text-white drop-shadow-md">FinPulse Analytics</p>
-                  <p className="text-[11px] text-white/90 drop-shadow-sm">Real-time Financial Intelligence</p>
-                </div>
               </div>
               <div className="mt-5">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold text-burgundy uppercase tracking-wider">
-                    Core Architecture
-                  </span>
-                  <span className="text-xs font-bold text-burgundy bg-burgundy/8 border border-burgundy/15 px-2.5 py-0.5 rounded-full">
-                    WebSocket & Postgres
+                <div className="flex items-center justify-between gap-2">
+                  <h3 className="text-xl font-serif font-bold text-ink">Visha IT Solutions</h3>
+                  <span className="rounded-full bg-burgundy/10 border border-burgundy/20 px-2.5 py-0.5 text-[11px] font-bold text-burgundy shrink-0">
+                    IT & Staffing Portal
                   </span>
                 </div>
-                <p className="mt-2.5 text-sm text-muted leading-relaxed">
-                  High-concurrency data dashboard with interactive visualizations, automated alert triggers, and sub-50ms query latency.
+                <p className="mt-1 text-xs font-medium text-muted">
+                  Enterprise Recruitment, Technical Staffing & IT Consulting Platform
+                </p>
+                <div className="mt-3 flex items-center justify-between border-t border-burgundy/10 pt-3 text-xs">
+                  <span className="font-semibold text-burgundy uppercase tracking-wider text-[10px]">
+                    Core Architecture
+                  </span>
+                  <span className="font-bold text-ink/80 text-[11px]">
+                    Next.js 15 & Talent Matrices
+                  </span>
+                </div>
+                <p className="mt-2 text-sm text-muted leading-relaxed">
+                  Specialized engineering placement platform featuring 48-hour candidate shortlisting SLAs and rigorous technical competency screening.
                 </p>
               </div>
             </div>
           </article>
 
-          {/* Project 3 */}
+          {/* Project 2: Vision Lifts & Solutions */}
           <article className="glass groove group overflow-hidden rounded-[2rem] p-5 sm:p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 flex flex-col justify-between">
             <div>
-              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-[#1a080d] shadow-md">
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-white border border-burgundy/15 p-1.5 sm:p-2.5 shadow-sm">
                 <Image
-                  src="/images/work/real-estate.jpg"
-                  alt="Veloce Scale attribution engine mockup"
+                  src="/images/work/vision-lifts.jpg"
+                  alt="Vision Lifts and Solutions commercial elevator platform"
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-contain object-center transition-transform duration-500 group-hover:scale-[1.01]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
-                <div className="absolute top-3 right-3">
-                  <span className="rounded-full bg-burgundy/85 backdrop-blur-md px-3 py-1 text-[10px] font-semibold text-white shadow-sm border border-white/20">
-                    Attribution Engine
-                  </span>
-                </div>
-                <div className="absolute bottom-3 left-3 right-3">
-                  <p className="text-xl font-serif font-bold text-white drop-shadow-md">Veloce Scale</p>
-                  <p className="text-[11px] text-white/90 drop-shadow-sm">Multi-Channel Ad Attribution</p>
-                </div>
               </div>
               <div className="mt-5">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold text-burgundy uppercase tracking-wider">
-                    Core Architecture
-                  </span>
-                  <span className="text-xs font-bold text-burgundy bg-burgundy/8 border border-burgundy/15 px-2.5 py-0.5 rounded-full">
-                    Meta CAPI Pipeline
+                <div className="flex items-center justify-between gap-2">
+                  <h3 className="text-xl font-serif font-bold text-ink">Vision Lifts & Solutions</h3>
+                  <span className="rounded-full bg-burgundy/10 border border-burgundy/20 px-2.5 py-0.5 text-[11px] font-bold text-burgundy shrink-0">
+                    Engineering & Infra
                   </span>
                 </div>
-                <p className="mt-2.5 text-sm text-muted leading-relaxed">
-                  Engineered server-to-server tracking pipeline connecting Meta & Google Ads for unified attribution and higher signal quality.
+                <p className="mt-1 text-xs font-medium text-muted">
+                  Commercial & Residential Elevator Solutions Engineered for South India
+                </p>
+                <div className="mt-3 flex items-center justify-between border-t border-burgundy/10 pt-3 text-xs">
+                  <span className="font-semibold text-burgundy uppercase tracking-wider text-[10px]">
+                    Core Architecture
+                  </span>
+                  <span className="font-bold text-ink/80 text-[11px]">
+                    Next.js 15 & Spec Libraries
+                  </span>
+                </div>
+                <p className="mt-2 text-sm text-muted leading-relaxed">
+                  Reliable elevator solutions platform engineered for South India commercial complexes, luxury residences, and hospitals with 500+ installations.
                 </p>
               </div>
             </div>

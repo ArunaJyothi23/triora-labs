@@ -7,7 +7,7 @@ import { CountUp } from "@/components/CountUp";
 
 export interface Project {
   id: string;
-  filterKey: "enterprise" | "construction" | "real-estate" | "ecommerce";
+  filterKey: "enterprise" | "engineering";
   category: string;
   title: string;
   subtitle: string;
@@ -27,75 +27,39 @@ const projects: Project[] = [
   {
     id: "visha-it",
     filterKey: "enterprise",
-    category: "Enterprise IT & Consulting",
+    category: "IT & Technical Staffing",
     title: "Visha IT Solutions",
-    subtitle: "Enterprise Technology & Talent Transformation Platform",
+    subtitle: "Enterprise Recruitment, Technical Staffing & IT Consulting Platform",
     image: "/images/work/visha-it-v2.jpg",
-    metricNumber: 58,
+    metricNumber: 48,
+    metricSuffix: "h",
+    metricLabel: "Shortlisting SLA",
+    challenge: "Fast-growing enterprises and tech startups required verified senior engineering talent without candidate drop-offs or lengthy compliance delays.",
+    solution: "Bespoke digital workforce portal unifying technical competency screening, executive search matrices, and automated hiring workflows.",
+    outcome: "48-hour candidate shortlisting SLA achieved with 58% increase in qualified corporate hiring inquiries.",
+    tags: ["Next.js 15", "Technical Staffing", "Enterprise IT", "Talent Transformation"],
+  },
+  {
+    id: "vision-lifts",
+    filterKey: "engineering",
+    category: "Engineering & Infrastructure",
+    title: "Vision Lifts & Solutions",
+    subtitle: "Commercial & Residential Elevator Solutions Engineered for South India",
+    image: "/images/work/vision-lifts.jpg",
+    metricNumber: 500,
     metricPrefix: "+",
-    metricSuffix: "%",
-    metricLabel: "B2B Inquiries",
-    challenge: "Fragmented service offerings and scattered candidate intake weakened enterprise client trust.",
-    solution: "Bespoke corporate web platform unifying cloud infrastructure, staffing matrices, and automated hiring.",
-    outcome: "58% increase in qualified corporate inquiries with sub-second global response times.",
-    tags: ["Next.js 15", "React 19", "Tailwind CSS", "Enterprise Architecture"],
-  },
-  {
-    id: "construction",
-    filterKey: "construction",
-    category: "Construction & Engineering",
-    title: "Structura Infrastructure",
-    subtitle: "Commercial Construction & Heavy Engineering Portal",
-    image: "/images/work/construction.jpg",
-    metricNumber: 4.2,
-    metricDecimals: 1,
-    metricSuffix: "×",
-    metricLabel: "Tender Engagement",
-    challenge: "Static legacy presentation restricted qualification for high-value commercial infrastructure contracts.",
-    solution: "Interactive engineering portal with 3D blueprint spec overlays and instant digital tender bidding.",
-    outcome: "Secured 3 major multi-million infrastructure contracts within 90 days of rollout.",
-    tags: ["Next.js 15", "Blueprint Engine", "Commercial Tender", "Tailwind CSS"],
-  },
-  {
-    id: "real-estate",
-    filterKey: "real-estate",
-    category: "Property & Real Estate CRM",
-    title: "Elite Estate Living",
-    subtitle: "Luxury Real Estate Marketplace & Lead Engine",
-    image: "/images/work/real-estate.jpg",
-    metricNumber: 2.8,
-    metricDecimals: 1,
-    metricSuffix: "×",
-    metricLabel: "Tour Bookings",
-    challenge: "Slow property listing pages caused high ad drop-off before buyers could schedule on-site viewings.",
-    solution: "High-speed villa marketplace with interactive map search and server-side Meta CAPI tracking.",
-    outcome: "280% increase in verified walk-through bookings with 40% faster agent dispatch.",
-    tags: ["Real Estate CRM", "Meta CAPI", "Interactive Maps", "Next.js 15"],
-  },
-  {
-    id: "ecommerce",
-    filterKey: "ecommerce",
-    category: "D2C E-Commerce",
-    title: "Aura Modern Living",
-    subtitle: "High-Performance Lifestyle Storefront & Checkout",
-    image: "/images/work/ecommerce-v2.jpg",
-    metricNumber: 166,
-    metricPrefix: "+",
-    metricSuffix: "%",
-    metricLabel: "Conversion Rate",
-    challenge: "76% cart abandonment on legacy storefront due to slow mobile UX and inaccurate ad attribution.",
-    solution: "Headless Next.js storefront with one-click checkout preview and Google Enhanced Conversions.",
-    outcome: "Storewide conversion rate surged from 1.8% to 4.8%; ad ROAS achieved 4.4x.",
-    tags: ["Headless Shopify", "Next.js 15", "Google Ads Engine", "Stripe"],
+    metricLabel: "Active Installations",
+    challenge: "Commercial developers and healthcare facilities needed an authoritative platform to review safety certifications and custom elevator engineering specs.",
+    solution: "Architectural elevator platform featuring interactive technical spec libraries, safety protocol matrices, and 24/7 service dispatch routing.",
+    outcome: "500+ verified installations represented across South India with 100% safety compliance certification.",
+    tags: ["Next.js 15", "Architectural Engineering", "Commercial Lifts", "24/7 Support"],
   },
 ];
 
 const filterTabs = [
   { key: "all", label: "All Projects" },
-  { key: "enterprise", label: "Enterprise IT" },
-  { key: "construction", label: "Construction & Infra" },
-  { key: "real-estate", label: "Real Estate CRM" },
-  { key: "ecommerce", label: "D2C E-Commerce" },
+  { key: "enterprise", label: "IT & Staffing" },
+  { key: "engineering", label: "Elevators & Infra" },
 ] as const;
 
 export function WorkShowcase() {
@@ -154,17 +118,16 @@ export function WorkShowcase() {
             className="glass groove group relative rounded-[2.2rem] border border-white/80 p-6 sm:p-8 lg:p-9 shadow-[0_16px_40px_rgba(90,42,48,0.06)] backdrop-blur-2xl transition duration-300 hover:shadow-[0_24px_56px_rgba(90,42,48,0.12)]"
           >
             <div className="grid items-center gap-6 lg:grid-cols-12 lg:gap-8">
-              {/* Left Column: Image (Balanced aspect ratio & height) */}
-              <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-auto lg:h-[420px] w-full overflow-hidden rounded-2xl border border-burgundy/15 bg-white shadow-xs lg:col-span-7">
+              {/* Left Column: Image (100% visible with complete logo, zero cropping) */}
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-burgundy/15 bg-white p-1.5 sm:p-2 shadow-xs lg:col-span-7">
                 <Image
                   src={proj.image}
                   alt={proj.title}
                   fill
                   priority={idx === 0}
-                  className="object-cover object-center transition duration-500 group-hover:scale-[1.02]"
+                  className="object-contain object-center transition duration-500 group-hover:scale-[1.01]"
                   sizes="(max-width: 1024px) 100vw, 58vw"
                 />
-                <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent" />
               </div>
 
               {/* Right Column: Case Study Breakdown (Ample height, button never cut off) */}

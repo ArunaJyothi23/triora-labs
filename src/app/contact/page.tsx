@@ -20,7 +20,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function ContactPage() {
   return (
-    <div className="min-h-[calc(100vh-5rem)] flex items-center justify-center py-4 lg:py-6">
+    <div className="min-h-[calc(100vh-6rem)] flex items-center justify-center pt-6 pb-12 sm:pt-10 sm:pb-16">
       <div className="container-xl w-full">
         {/* 2-Column Balanced Viewport Layout without Map Background */}
         <div className="grid items-stretch gap-6 lg:gap-8 lg:grid-cols-2">

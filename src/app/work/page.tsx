@@ -35,9 +35,9 @@ export default function WorkPage() {
             </div>
 
             {/* Display Headline */}
-            <h1 className="display mt-5 text-4xl text-ink sm:text-6xl lg:text-7xl leading-[1.06]">
+            <h1 className="display mt-5 text-3xl sm:text-5xl lg:text-7xl text-ink leading-[1.1] [text-wrap:balance]">
               Digital Products Built for{" "}
-              <span className="font-serif italic font-normal text-burgundy shimmer-text">
+              <span className="font-serif italic font-normal text-burgundy">
                 Commercial Impact.
               </span>
             </h1>

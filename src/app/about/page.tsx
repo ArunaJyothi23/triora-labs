@@ -111,7 +111,7 @@ export default function AboutPage() {
       {/* ─────────────────────────────────────────────────────────────
           1. HIGH-ATTRACTION SMART HERO SECTION
       ───────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden pt-4 pb-12 lg:pt-8 lg:pb-20">
+      <section className="relative overflow-hidden pt-6 pb-12 sm:pt-10 lg:pt-12 lg:pb-20">
         {/* Ambient Glows */}
         <div className="pointer-events-none absolute -top-28 left-1/2 -z-10 h-[550px] w-[950px] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(107,44,56,0.1),transparent_70%)] blur-3xl" />
         <div className="pointer-events-none absolute top-1/3 -right-20 -z-10 h-[380px] w-[380px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(139,58,74,0.08),transparent_70%)] blur-3xl" />

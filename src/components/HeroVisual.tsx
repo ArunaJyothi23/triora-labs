@@ -37,20 +37,21 @@ export function HeroVisual() {
             <div className="pointer-events-none absolute inset-0 z-20 bg-[linear-gradient(135deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0.03)_38%,transparent_62%)]" />
 
             {/* INNER WEBSITE SCREEN VIEWPORT */}
-            <div className="relative min-h-[350px] sm:min-h-[380px] p-3.5 sm:p-5 overflow-hidden bg-[radial-gradient(ellipse_at_top,rgba(107,44,56,0.06),transparent_65%),#faf6f0]">
+            <div className="relative min-h-[310px] sm:min-h-[380px] p-3 sm:p-5 overflow-hidden bg-[radial-gradient(ellipse_at_top,rgba(107,44,56,0.06),transparent_65%),#faf6f0]">
               {/* ─────────────────────────────────────────────────────────────
                   EXACT TRIORA LABS NAVBAR (1:1 REPLICA WITH MAIN WEBSITE LOGO)
               ───────────────────────────────────────────────────────────── */}
-              <div className="glass groove flex items-center justify-between rounded-full px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-sm">
+              <div className="glass groove flex items-center justify-between rounded-full px-2 py-1.5 sm:px-3 sm:py-2 shadow-sm">
                 {/* Brand Logo - EXACT same logo as the main website navbar */}
                 <div className="flex items-center pl-0.5 sm:pl-1 shrink-0">
                   <Image
                     src="/images/logo.png"
                     alt="Triora Labs"
-                    width={180}
-                    height={90}
-                    className="block h-5 sm:h-6 w-auto object-contain drop-shadow-[0_1px_4px_rgba(74,28,38,0.18)]"
+                    width={260}
+                    height={120}
+                    className="block h-5 sm:h-7 w-auto object-contain drop-shadow-[0_1px_4px_rgba(74,28,38,0.18)]"
                     priority
+                    quality={100}
                   />
                 </div>
 
@@ -72,7 +73,7 @@ export function HeroVisual() {
 
                 {/* Burgundy CTA Pill Button */}
                 <span
-                  className="rounded-full bg-[linear-gradient(180deg,#7a3340,#5a2430)] px-2 sm:px-3 py-1 text-[8.5px] sm:text-[9.5px] font-medium text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_4px_10px_rgba(74,28,38,0.3)] shrink-0 whitespace-nowrap"
+                  className="rounded-full bg-[linear-gradient(180deg,#7a3340,#5a2430)] px-2 sm:px-3 py-1 text-[8px] sm:text-[9.5px] font-medium text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_4px_10px_rgba(74,28,38,0.3)] shrink-0 whitespace-nowrap"
                   style={{ color: "#ffffff" }}
                 >
                   Start a Project ↗
@@ -80,51 +81,51 @@ export function HeroVisual() {
               </div>
 
               {/* SCREEN CONTENT: TRIORA LABS HERO */}
-              <div className="mt-6 text-center px-1">
+              <div className="mt-4 sm:mt-6 text-center px-1">
                 {/* Eyebrow */}
-                <div className="inline-flex items-center gap-1.5 rounded-full border border-burgundy/15 bg-white/70 px-2.5 py-0.5 text-[9px] font-semibold tracking-wider text-burgundy uppercase backdrop-blur-xs">
+                <div className="inline-flex items-center gap-1.5 rounded-full border border-burgundy/15 bg-white/70 px-2 py-0.5 text-[8px] sm:text-[9px] font-semibold tracking-wider text-burgundy uppercase backdrop-blur-xs">
                   <span className="h-1.5 w-1.5 rounded-full bg-burgundy" />
                   Technology Built Around Your Business
                 </div>
 
                 {/* Display Headline */}
-                <h3 className="mt-3 text-lg sm:text-2xl font-serif font-bold text-ink leading-tight">
+                <h3 className="mt-2.5 sm:mt-3 text-base sm:text-2xl font-serif font-bold text-ink leading-tight">
                   Websites, <span className="italic font-normal text-burgundy">Apps & Ads</span> that Grow Business
                 </h3>
 
                 {/* Description */}
-                <p className="mt-2 mx-auto max-w-md text-[10px] sm:text-[11.5px] leading-relaxed text-muted">
+                <p className="mt-1.5 sm:mt-2 mx-auto max-w-md text-[9.5px] sm:text-[11.5px] leading-relaxed text-muted">
                   We design high-performing digital experiences, connected to accurate Meta CAPI tracking & paid media for real results.
                 </p>
 
                 {/* CTAs */}
-                <div className="mt-3.5 flex items-center justify-center gap-2">
-                  <span className="rounded-full bg-[linear-gradient(180deg,#7a3340,#5a2430)] px-3.5 py-1.2 text-[10px] font-medium text-white shadow-sm">
+                <div className="mt-2.5 sm:mt-3.5 flex items-center justify-center gap-2">
+                  <span className="rounded-full bg-[linear-gradient(180deg,#7a3340,#5a2430)] px-3 py-1 text-[8.5px] sm:text-[10px] font-medium text-white shadow-sm">
                     Start a Project ↗
                   </span>
-                  <span className="glass groove rounded-full px-3 py-1.2 text-[10px] font-medium text-ink shadow-2xs">
+                  <span className="glass groove rounded-full px-2.5 py-1 text-[8.5px] sm:text-[10px] font-medium text-ink shadow-2xs">
                     Explore Services ↗
                   </span>
                 </div>
 
-                {/* 3 Mini Bento Feature Metric Cards inside device screen (NO GREEN COLORS) */}
-                <div className="mt-5 grid grid-cols-3 gap-2.5 text-left">
-                  <div className="glass groove rounded-xl p-2.5">
-                    <div className="text-[13px] font-bold text-burgundy leading-none">Sub-second</div>
-                    <div className="text-[9.5px] font-semibold text-ink mt-1">High Performance</div>
-                    <div className="text-[8px] text-muted">Next.js & React 19</div>
+                {/* 3 Mini Bento Feature Metric Cards inside device screen */}
+                <div className="mt-3.5 sm:mt-5 grid grid-cols-3 gap-1.5 sm:gap-2.5 text-left">
+                  <div className="glass groove rounded-xl p-2 sm:p-2.5">
+                    <div className="text-[11px] sm:text-[13px] font-bold text-burgundy leading-none">Sub-second</div>
+                    <div className="text-[8.5px] sm:text-[9.5px] font-semibold text-ink mt-1 truncate">High Performance</div>
+                    <div className="text-[7.5px] sm:text-[8px] text-muted truncate">Next.js & React 19</div>
                   </div>
 
-                  <div className="glass groove rounded-xl p-2.5">
-                    <div className="text-[13px] font-bold text-burgundy leading-none">Direct API</div>
-                    <div className="text-[9.5px] font-semibold text-ink mt-1">Meta CAPI</div>
-                    <div className="text-[8px] text-muted">Server-Side Tracking</div>
+                  <div className="glass groove rounded-xl p-2 sm:p-2.5">
+                    <div className="text-[11px] sm:text-[13px] font-bold text-burgundy leading-none">Direct API</div>
+                    <div className="text-[8.5px] sm:text-[9.5px] font-semibold text-ink mt-1 truncate">Meta CAPI</div>
+                    <div className="text-[7.5px] sm:text-[8px] text-muted truncate">Server-Side Tracking</div>
                   </div>
 
-                  <div className="glass groove rounded-xl p-2.5">
-                    <div className="text-[13px] font-bold text-burgundy leading-none">Scalable</div>
-                    <div className="text-[9.5px] font-semibold text-ink mt-1">Target ROAS</div>
-                    <div className="text-[8px] text-muted">Google & Meta Ads</div>
+                  <div className="glass groove rounded-xl p-2 sm:p-2.5">
+                    <div className="text-[11px] sm:text-[13px] font-bold text-burgundy leading-none">Scalable</div>
+                    <div className="text-[8.5px] sm:text-[9.5px] font-semibold text-ink mt-1 truncate">Target ROAS</div>
+                    <div className="text-[7.5px] sm:text-[8px] text-muted truncate">Google & Meta Ads</div>
                   </div>
                 </div>
               </div>

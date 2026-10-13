@@ -119,6 +119,19 @@
   box-shadow: 0 0 0 4px rgba(107, 44, 56, 0.14);
 }
 
+.glass-dark .eyebrow,
+.eyebrow.eyebrow-light,
+.eyebrow-light {
+  color: #fce7cf !important;
+}
+
+.glass-dark .eyebrow::before,
+.eyebrow.eyebrow-light::before,
+.eyebrow-light::before {
+  background: #f59e0b !important;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.3) !important;
+}
+
 .container-xl {
   width: min(1200px, calc(100% - 2rem));
   margin-inline: auto;
