@@ -21,7 +21,7 @@ export default function TermsPage() {
       <div className="glass groove relative mx-auto mt-10 max-w-3xl space-y-8 rounded-[2.5rem] border border-white/80 bg-white/75 p-8 sm:p-12 text-sm leading-relaxed text-muted shadow-xl backdrop-blur-xl">
         <div>
           <p className="text-base text-ink font-medium leading-relaxed">
-            By accessing or browsing {site.url}, you agree to comply with and be bound by these Terms of Service. Custom development, ad management, and student project services are additionally governed by separate written statements of work (SOWs) or agreements.
+            By accessing or browsing https://trioralabs.com, you agree to comply with and be bound by these Terms of Service. Custom development, ad management, and student project services are additionally governed by separate written statements of work (SOWs) or agreements.
           </p>
         </div>
 

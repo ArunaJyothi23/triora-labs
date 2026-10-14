@@ -28,16 +28,20 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 px-3 pt-2.5 sm:px-5 sm:pt-3">
-      <div className="container-xl">
-        <div className="glass groove flex items-center justify-between rounded-full px-3.5 py-1.5 sm:px-5 sm:py-2">
+    <header className="sticky top-0 z-50 w-full px-2 pt-2 sm:px-4 sm:pt-3">
+      <div className="container-xl max-w-full">
+        <div className="glass groove flex w-full items-center justify-between rounded-full px-2.5 py-1.5 sm:px-4 sm:py-2 xl:px-5">
           {/* Logo */}
-          <Link href="/" className="flex items-center pl-0.5 sm:pl-1 py-0.5" aria-label="Triora Labs home">
-            <Logo priority />
+          <Link
+            href="/"
+            className="flex shrink-0 items-center pl-0.5 py-0.5 transition-opacity hover:opacity-95"
+            aria-label="Triora Labs home"
+          >
+            <Logo priority imageClassName="h-7.5 sm:h-8 lg:h-8 xl:h-9.5" />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+          <nav className="hidden min-w-0 items-center gap-0.5 lg:flex min-[1150px]:gap-1 xl:gap-1.5" aria-label="Primary">
             {navLinks.map((link) => {
               const active = pathname === link.href;
               return (
@@ -45,7 +49,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   prefetch={true}
-                  className={`rounded-full px-3.5 py-1.5 text-[0.88rem] font-medium transition ${
+                  className={`rounded-full px-2 py-1 text-[0.76rem] font-medium whitespace-nowrap transition min-[1150px]:px-2.5 min-[1150px]:text-[0.82rem] xl:px-3.5 xl:py-1.5 xl:text-[0.88rem] ${
                     active ? "bg-white/80 text-burgundy shadow-sm" : "text-muted hover:text-ink"
                   }`}
                 >
@@ -55,27 +59,28 @@ export function Header() {
             })}
           </nav>
 
-          {/* Desktop CTA & Mobile Toggle */}
-          <div className="flex items-center gap-2">
+          {/* CTA & Mobile Toggle */}
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
             <Link
               href="/contact"
               prefetch={true}
-              className="hidden rounded-full bg-[linear-gradient(180deg,#7a3340,#5a2430)] px-5 py-2.5 text-[0.88rem] font-medium !text-white text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_8px_20px_rgba(74,28,38,0.32)] transition-all duration-200 hover:brightness-110 sm:inline-flex"
+              className="inline-flex shrink-0 items-center justify-center rounded-full bg-[linear-gradient(180deg,#7a3340,#5a2430)] px-3 py-1.5 text-xs font-semibold !text-white text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_8px_20px_rgba(74,28,38,0.32)] transition-all duration-200 hover:brightness-110 sm:px-3.5 sm:py-2 sm:text-[0.82rem] xl:px-5 xl:py-2.5 xl:text-[0.88rem] whitespace-nowrap"
               style={{ color: "#ffffff" }}
             >
-              Start a Project ↗
+              <span>Start a Project</span>
+              <span className="ml-1 text-xs">↗</span>
             </Link>
 
             {/* Mobile Hamburger Button */}
             <button
               type="button"
-              className="glass relative flex h-10 w-10 items-center justify-center rounded-full text-ink transition hover:bg-white/80 lg:hidden"
+              className="glass relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-ink transition hover:bg-white/80 sm:h-10 sm:w-10 lg:hidden"
               aria-expanded={open}
               aria-label={open ? "Close menu" : "Open menu"}
               onClick={() => setOpen((v) => !v)}
             >
               <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
-              <div className="flex h-4 w-4 flex-col justify-between">
+              <div className="flex h-3.5 w-3.5 sm:h-4 sm:w-4 flex-col justify-between">
                 <span
                   className={`h-0.5 w-full rounded-full bg-ink transition-all duration-300 ${
                     open ? "translate-y-1.5 rotate-45" : ""

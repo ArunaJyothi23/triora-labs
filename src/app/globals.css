@@ -139,7 +139,7 @@
 
 @media (max-width: 640px) {
   .container-xl {
-    width: calc(100% - 1.5rem);
+    width: calc(100% - 1rem);
   }
 }
 
@@ -229,20 +229,29 @@
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: marquee 24s linear infinite;
+  animation: marquee 68s linear infinite;
 }
 
 .animate-marquee-reverse {
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: marquee-reverse 34s linear infinite;
+  animation: marquee-reverse 72s linear infinite;
+}
+
+.animate-marquee-slow {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee 95s linear infinite;
 }
 
 .animate-marquee:hover,
 .animate-marquee-reverse:hover,
+.animate-marquee-slow:hover,
 .group:hover .animate-marquee,
-.group:hover .animate-marquee-reverse {
+.group:hover .animate-marquee-reverse,
+.group:hover .animate-marquee-slow {
   animation-play-state: paused;
 }
 

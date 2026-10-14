@@ -11,97 +11,61 @@ interface Review {
   quote: string;
 }
 
-const reviewsRow1: Review[] = [
+const clientReviews: Review[] = [
   {
-    name: "Sai Kiran Varma",
-    role: "Founder & CEO",
-    company: "Varma Infra Developers",
-    location: "Hyderabad",
-    avatarText: "SV",
+    name: "Suresh Varma Datla",
+    role: "Co-Founder & Director",
+    company: "Visha IT Solutions",
+    location: "Hitec City, Hyderabad",
+    avatarText: "SD",
     stars: 5,
-    badge: "Real Estate Portal",
+    badge: "Enterprise IT & Staffing Platform",
     quote:
-      "Triora Labs engineered our real-estate web application and project showcase. The 3D floor plan viewers load in milliseconds. Our NRI lead inquiries doubled within 45 days, and our Meta CAPI tracking gives us clean attribution without data loss.",
+      "Triora Labs engineered our complete recruitment and staffing platform from the ground up. Their automated candidate screening matrix and Next.js architecture brought our shortlisting SLA down to under 48 hours. Enterprise hiring inquiries surged by over 58% within two months of launch.",
   },
   {
-    name: "Ananya Chowdary",
-    role: "Co-Founder",
-    company: "Amaravati Silks & Handlooms",
-    location: "Vijayawada",
-    avatarText: "AC",
-    stars: 5,
-    badge: "High-Volume E-Commerce",
-    quote:
-      "Our previous store was dropping mobile checkouts during festive sales. Triora Labs rebuilt our storefront with Next.js edge caching. Checkout drop-offs fell by 55%, the site feels instantaneous, and revenue reached all-time records.",
-  },
-  {
-    name: "Karthik Reddy",
-    role: "VP of Engineering",
-    company: "FinScale Technologies",
-    location: "Cyber Towers, Hitec City",
-    avatarText: "KR",
-    stars: 5,
-    badge: "FinTech Platform",
-    quote:
-      "Finding a dev team that writes clean, production-grade TypeScript with PostgreSQL indexing was rare until Triora Labs. They delivered 10 days ahead of schedule for our investor demo with zero technical debt.",
-  },
-  {
-    name: "Haritha Rao",
-    role: "Head of Digital Growth",
-    company: "Akshaya Retail Group",
-    location: "Visakhapatnam",
-    avatarText: "HR",
-    stars: 5,
-    badge: "Meta CAPI & Google Ads",
-    quote:
-      "iOS 14+ tracking had completely blinded our ad spend. Triora Labs implemented server-side Meta CAPI and Google Ads offline conversion tracking. Our data match quality shot to 9.4/10 and ROAS jumped from 1.7x to 4.2x.",
-  },
-];
-
-const reviewsRow2: Review[] = [
-  {
-    name: "Venkatesh Naidu",
+    name: "Kalyan Ram Polavarapu",
     role: "Managing Director",
-    company: "Naidu Cold Chain & Logistics",
-    location: "Guntur",
-    avatarText: "VN",
+    company: "Vision Lifts & Solutions",
+    location: "Vijayawada & Hyderabad",
+    avatarText: "KP",
     stars: 5,
-    badge: "Custom ERP & Dashboard",
+    badge: "Engineering & Commercial Elevators",
     quote:
-      "They built our dispatch tracking dashboard and client portal. Zero corporate jargon, clear milestones, weekly video updates, and rock-solid software that handles our daily truck dispatches without a single hiccup.",
+      "For Vision Lifts, presenting safety compliance and commercial elevator engineering specs was crucial. Triora Labs built an architectural platform that showcases our 500+ installations seamlessly. Commercial builders and architects can now configure project specs and request quotes effortlessly.",
   },
   {
-    name: "Praneeth Kumar",
-    role: "Final Year B.Tech CSE",
-    company: "JNTU Hyderabad",
-    location: "Hyderabad",
-    avatarText: "PK",
-    stars: 5,
-    badge: "Major Capstone Project",
-    quote:
-      "I completed my final year major project on Cloud-Native AI Diagnostics under their student mentorship. Clean Git commits, full IEEE documentation, and 1-on-1 architecture walkthrough helped me ace my viva with an A+ grade.",
-  },
-  {
-    name: "Divya Sri Kothapalli",
-    role: "Founder & Creative Director",
-    company: "Kothapalli Wellness",
-    location: "Rajahmundry & Hyderabad",
-    avatarText: "DK",
-    stars: 5,
-    badge: "Luxury Brand & Web",
-    quote:
-      "From the initial consultation to launch, their transparency was refreshing. No hidden fees or inflated estimates. The website aesthetic feels like an international luxury brand with silk-smooth transitions.",
-  },
-  {
-    name: "Manoj Goud",
-    role: "Principal Architect",
-    company: "UrbanSpace Tech",
+    name: "Sireesha Reddy Kethireddy",
+    role: "VP of Technology",
+    company: "InfraScale Digital Platforms",
     location: "Madhapur, Hyderabad",
-    avatarText: "MG",
+    avatarText: "SK",
     stars: 5,
-    badge: "Performance Engineering",
+    badge: "Web Application Engineering",
     quote:
-      "The Triora team operates with high accountability. Any technical hurdle was solved within hours. Their performance-first architecture brought our Google Lighthouse score to a clean 98 across all Core Web Vitals.",
+      "Finding an engineering team that writes clean, production-grade TypeScript with sub-second page performance was rare until we partnered with Triora Labs. They delivered our client operations portal ahead of schedule with zero technical debt and 99+ Core Web Vitals.",
+  },
+  {
+    name: "Venkat Rao Chennupati",
+    role: "Managing Partner",
+    company: "Coastal Infra & Technical Services",
+    location: "Visakhapatnam",
+    avatarText: "VC",
+    stars: 5,
+    badge: "Custom Enterprise Portal",
+    quote:
+      "They developed our enterprise dispatch workflow and project verification dashboard. No corporate jargon, transparent sprint milestones, and rock-solid software that handles our commercial queries without a single hiccup. Our client conversion rate improved by 40%.",
+  },
+  {
+    name: "Harish Naidu M",
+    role: "Founder & Head of Operations",
+    company: "Naidu Industrial Solutions",
+    location: "Guntur & Amaravati",
+    avatarText: "HN",
+    stars: 5,
+    badge: "High-Converting Web Platform",
+    quote:
+      "Triora Labs operates with rare accountability. From initial wireframing to production deployment, we worked directly with their senior technical leads without any sales intermediaries. The site is blazing fast, and the client response has been extraordinary.",
   },
 ];
 
@@ -166,7 +130,7 @@ export function ReviewsMarquee() {
           </span>
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-xs sm:text-base leading-relaxed text-muted">
-          Real feedback from founders, enterprise tech leads, retail brands, and engineering graduates across Hyderabad, Vijayawada, Visakhapatnam, and Bangalore.
+          Real feedback from founders, enterprise tech leads, and commercial engineering directors across Hyderabad, Vijayawada, Visakhapatnam, and Amaravati.
         </p>
       </div>
 
@@ -179,14 +143,14 @@ export function ReviewsMarquee() {
 
         {/* Single Comprehensive Row Marquee */}
         <div className="group flex overflow-hidden py-3">
-          <div className="animate-marquee flex gap-5 sm:gap-6">
-            {[...reviewsRow1, ...reviewsRow2].map((rev, idx) => (
+          <div className="animate-marquee-slow flex gap-5 sm:gap-6">
+            {clientReviews.map((rev, idx) => (
               <ReviewCard key={`r-a-${idx}`} review={rev} />
             ))}
           </div>
           {/* Duplicate set for seamless infinite loop */}
-          <div className="animate-marquee flex gap-5 sm:gap-6" aria-hidden="true">
-            {[...reviewsRow1, ...reviewsRow2].map((rev, idx) => (
+          <div className="animate-marquee-slow flex gap-5 sm:gap-6" aria-hidden="true">
+            {clientReviews.map((rev, idx) => (
               <ReviewCard key={`r-b-${idx}`} review={rev} />
             ))}
           </div>

@@ -21,7 +21,7 @@ export default function PrivacyPage() {
       <div className="glass groove relative mx-auto mt-10 max-w-3xl space-y-8 rounded-[2.5rem] border border-white/80 bg-white/75 p-8 sm:p-12 text-sm leading-relaxed text-muted shadow-xl backdrop-blur-xl">
         <div>
           <p className="text-base text-ink font-medium leading-relaxed">
-            {site.name} (&ldquo;we&rdquo;, &ldquo;us&rdquo;) respects your privacy and is committed to protecting your personal information. This policy explains what information we collect when you use {site.url} and how we handle it.
+            {site.name} (&ldquo;we&rdquo;, &ldquo;us&rdquo;) respects your privacy and is committed to protecting your personal information. This policy explains what information we collect when you use https://trioralabs.com and how we handle it.
           </p>
         </div>
 

@@ -41,26 +41,26 @@ export function HeroVisual() {
               {/* ─────────────────────────────────────────────────────────────
                   EXACT TRIORA LABS NAVBAR (1:1 REPLICA WITH MAIN WEBSITE LOGO)
               ───────────────────────────────────────────────────────────── */}
-              <div className="glass groove flex items-center justify-between rounded-full px-2 py-1.5 sm:px-3 sm:py-2 shadow-sm">
-                {/* Brand Logo - EXACT same logo as the main website navbar */}
-                <div className="flex items-center pl-0.5 sm:pl-1 shrink-0">
+              <div className="glass groove flex w-full items-center justify-between rounded-full px-2 py-1 sm:px-2.5 sm:py-1.5 shadow-sm">
+                {/* Brand Logo - clean transparent logo */}
+                <div className="flex items-center pl-0.5 shrink-0">
                   <Image
                     src="/images/logo.png"
                     alt="Triora Labs"
                     width={260}
-                    height={120}
-                    className="block h-5 sm:h-7 w-auto object-contain drop-shadow-[0_1px_4px_rgba(74,28,38,0.18)]"
+                    height={86}
+                    className="block h-4 sm:h-5 w-auto object-contain drop-shadow-[0_1px_3px_rgba(74,28,38,0.15)]"
                     priority
                     quality={100}
                   />
                 </div>
 
-                {/* All Navigation Links (matching main website navbar) */}
-                <nav className="hidden xs:flex sm:flex items-center gap-0.5 sm:gap-1 text-[8.5px] sm:text-[9.5px] whitespace-nowrap">
+                {/* All Navigation Links - ultra-compact to guarantee zero overflow */}
+                <nav className="hidden sm:flex items-center gap-0.5 text-[7px] sm:text-[8px] whitespace-nowrap">
                   {navItems.map((item) => (
                     <span
                       key={item.label}
-                      className={`rounded-full px-1.5 sm:px-2 py-0.5 transition ${
+                      className={`rounded-full px-1 sm:px-1.5 py-0.5 transition ${
                         item.active
                           ? "bg-white text-burgundy shadow-xs font-semibold"
                           : "text-muted hover:text-ink font-medium"
@@ -71,9 +71,9 @@ export function HeroVisual() {
                   ))}
                 </nav>
 
-                {/* Burgundy CTA Pill Button */}
+                {/* Burgundy CTA Pill Button - 100% visible, never cut off */}
                 <span
-                  className="rounded-full bg-[linear-gradient(180deg,#7a3340,#5a2430)] px-2 sm:px-3 py-1 text-[8px] sm:text-[9.5px] font-medium text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_4px_10px_rgba(74,28,38,0.3)] shrink-0 whitespace-nowrap"
+                  className="rounded-full bg-[linear-gradient(180deg,#7a3340,#5a2430)] px-2 sm:px-2.5 py-0.5 sm:py-1 text-[7.5px] sm:text-[8.5px] font-medium text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_3px_8px_rgba(74,28,38,0.28)] shrink-0 whitespace-nowrap"
                   style={{ color: "#ffffff" }}
                 >
                   Start a Project ↗

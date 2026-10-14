@@ -64,54 +64,102 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
-          2. TECH STACK & ENGINE ECOSYSTEM (AUTO-SCROLLING MARQUEE)
+          2. TECH STACK & ENGINE ECOSYSTEM (DUAL-TRACK HIGH-ROAS MARQUEE)
       ───────────────────────────────────────────────────────────── */}
       <section className="container-xl pb-14">
-        <div className="relative overflow-hidden rounded-2xl border border-burgundy/10 bg-white/60 py-5.5 shadow-2xs backdrop-blur-md">
-          <p className="text-center text-[11px] font-semibold uppercase tracking-widest text-muted mb-4">
-            Engineered With Modern Enterprise-Grade Technologies & Ad Networks
-          </p>
+        <div className="glass groove relative overflow-hidden rounded-[2.2rem] border border-burgundy/15 bg-white/75 py-6 sm:py-8 shadow-[0_15px_40px_rgba(90,42,48,0.06)] backdrop-blur-xl">
+          {/* Header Bar */}
+          <div className="mb-5 px-6 text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-burgundy/15 bg-white/85 px-4 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-burgundy shadow-2xs">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-burgundy opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-burgundy"></span>
+              </span>
+              Engineered With Modern Enterprise Tech & Certified Ad Networks
+            </div>
+            <p className="mt-2 text-xs text-muted sm:text-[13px]">
+              Certified Google & Meta Ad Partners • Server-Side Meta CAPI • Sub-Second Next.js Architecture
+            </p>
+          </div>
 
           {/* Left and Right Smooth Fade Gradient Masks */}
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-20 bg-gradient-to-r from-[rgba(244,239,232,0.95)] via-[rgba(244,239,232,0.6)] to-transparent" />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-20 bg-gradient-to-l from-[rgba(244,239,232,0.95)] via-[rgba(244,239,232,0.6)] to-transparent" />
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-20 w-16 sm:w-28 bg-gradient-to-r from-[--bg] via-[--bg]/80 to-transparent" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-20 w-16 sm:w-28 bg-gradient-to-l from-[--bg] via-[--bg]/80 to-transparent" />
 
-          {/* Infinite Auto-Scrolling Marquee Track (NO GREEN COLORS) */}
-          <div className="flex overflow-hidden select-none">
-            <div className="animate-marquee flex items-center gap-6 whitespace-nowrap text-sm font-medium text-ink/85">
+          {/* Row 1: High-ROAS Ad Networks, CAPI & Conversion Attribution (Left-to-Right) */}
+          <div className="group flex overflow-hidden select-none py-1.5">
+            <div className="animate-marquee flex items-center gap-3 sm:gap-4 whitespace-nowrap">
               {[
-                { name: "Next.js 15", icon: "▲", color: "text-black font-bold" },
-                { name: "React 19", icon: "⚛", color: "text-[#00d8ff]" },
-                { name: "TypeScript", icon: "TS", color: "text-[#3178c6] font-bold" },
-                { name: "Tailwind CSS", icon: "✦", color: "text-[#38bdf8]" },
-                { name: "Meta Marketing API & CAPI", icon: "∞", color: "text-[#0668e1] font-bold" },
-                { name: "Google Ads Partner", icon: "G", color: "text-[#ea4335] font-bold" },
-                { name: "Supabase Cloud", icon: "⚡", color: "text-burgundy font-bold" },
-                { name: "Vercel Edge", icon: "▲", color: "text-black" },
-                { name: "Node.js & Python", icon: "⬢", color: "text-ink font-bold" },
-                { name: "PostgreSQL", icon: "🐘", color: "text-[#336791]" },
-                { name: "Stripe Infrastructure", icon: "💳", color: "text-[#635bff]" },
-                { name: "Shopify Plus", icon: "🛍️", color: "text-burgundy" },
-                { name: "Next.js 15", icon: "▲", color: "text-black font-bold" },
-                { name: "React 19", icon: "⚛", color: "text-[#00d8ff]" },
-                { name: "TypeScript", icon: "TS", color: "text-[#3178c6] font-bold" },
-                { name: "Tailwind CSS", icon: "✦", color: "text-[#38bdf8]" },
-                { name: "Meta Marketing API & CAPI", icon: "∞", color: "text-[#0668e1] font-bold" },
-                { name: "Google Ads Partner", icon: "G", color: "text-[#ea4335] font-bold" },
-                { name: "Supabase Cloud", icon: "⚡", color: "text-burgundy font-bold" },
-                { name: "Vercel Edge", icon: "▲", color: "text-black" },
-                { name: "Node.js & Python", icon: "⬢", color: "text-ink font-bold" },
-                { name: "PostgreSQL", icon: "🐘", color: "text-[#336791]" },
-                { name: "Stripe Infrastructure", icon: "💳", color: "text-[#635bff]" },
-                { name: "Shopify Plus", icon: "🛍️", color: "text-burgundy" },
-              ].map((tech, i) => (
-                <span
-                  key={`${tech.name}-${i}`}
-                  className="inline-flex items-center gap-2 rounded-full border border-burgundy/10 bg-white/70 px-4 py-1.5 shadow-2xs transition hover:border-burgundy/25 hover:bg-white"
+                { name: "Google Ads Partner", icon: "G", color: "text-[#ea4335] font-bold", tag: "Certified" },
+                { name: "Meta Ads Manager", icon: "∞", color: "text-[#0081fb] font-bold", tag: "High-ROAS" },
+                { name: "Meta Conversions API (CAPI)", icon: "⚡", color: "text-burgundy font-bold", tag: "Server-Side" },
+                { name: "Google Performance Max & Search", icon: "📈", color: "text-[#ea4335] font-bold", tag: "High-Intent" },
+                { name: "First-Party Signal Tracking", icon: "🎯", color: "text-amber-700 font-bold", tag: "9.8/10 EMQ" },
+                { name: "Meta Event Deduplication", icon: "🛡️", color: "text-[#0081fb] font-bold", tag: "Zero Loss" },
+                { name: "Google Analytics 4 & GTM", icon: "📊", color: "text-amber-700 font-bold", tag: "Attribution" },
+                { name: "Facebook & Instagram Sponsored", icon: "∞", color: "text-[#0081fb] font-bold", tag: "Audience Scale" },
+                { name: "Real-Time Conversion Attribution", icon: "⚡", color: "text-burgundy font-bold", tag: "First-Party" },
+                { name: "Target ROAS Scaling Engine", icon: "💎", color: "text-burgundy font-bold", tag: "Profitable Spend" },
+                { name: "Google Ads Partner", icon: "G", color: "text-[#ea4335] font-bold", tag: "Certified" },
+                { name: "Meta Ads Manager", icon: "∞", color: "text-[#0081fb] font-bold", tag: "High-ROAS" },
+                { name: "Meta Conversions API (CAPI)", icon: "⚡", color: "text-burgundy font-bold", tag: "Server-Side" },
+                { name: "Google Performance Max & Search", icon: "📈", color: "text-[#ea4335] font-bold", tag: "High-Intent" },
+                { name: "First-Party Signal Tracking", icon: "🎯", color: "text-amber-700 font-bold", tag: "9.8/10 EMQ" },
+                { name: "Meta Event Deduplication", icon: "🛡️", color: "text-[#0081fb] font-bold", tag: "Zero Loss" },
+                { name: "Google Analytics 4 & GTM", icon: "📊", color: "text-amber-700 font-bold", tag: "Attribution" },
+                { name: "Facebook & Instagram Sponsored", icon: "∞", color: "text-[#0081fb] font-bold", tag: "Audience Scale" },
+                { name: "Real-Time Conversion Attribution", icon: "⚡", color: "text-burgundy font-bold", tag: "First-Party" },
+                { name: "Target ROAS Scaling Engine", icon: "💎", color: "text-burgundy font-bold", tag: "Profitable Spend" },
+              ].map((item, i) => (
+                <div
+                  key={`ad-${item.name}-${i}`}
+                  className="inline-flex items-center gap-2 rounded-full border border-burgundy/15 bg-white/90 px-3.5 py-1.5 shadow-2xs backdrop-blur-md transition-all duration-200 hover:scale-105 hover:border-burgundy/40 hover:bg-white"
                 >
-                  <span className={tech.color}>{tech.icon}</span>
-                  <span className="text-xs sm:text-sm">{tech.name}</span>
-                </span>
+                  <span className={`text-xs sm:text-sm ${item.color}`}>{item.icon}</span>
+                  <span className="text-xs sm:text-[13px] font-semibold text-ink">{item.name}</span>
+                  <span className="rounded-full bg-burgundy/8 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-burgundy">
+                    {item.tag}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 2: Core Engineering Frameworks & Cloud Infrastructure (Reverse Direction) */}
+          <div className="group mt-2.5 flex overflow-hidden select-none py-1.5">
+            <div className="animate-marquee-reverse flex items-center gap-3 sm:gap-4 whitespace-nowrap">
+              {[
+                { name: "Next.js 15 App Router", icon: "▲", color: "text-black font-bold", tag: "React 19" },
+                { name: "TypeScript Strict Mode", icon: "TS", color: "text-[#3178c6] font-bold", tag: "Zero Debt" },
+                { name: "Tailwind CSS Styling", icon: "✦", color: "text-[#38bdf8] font-bold", tag: "Sub-50ms Paint" },
+                { name: "Supabase Cloud Database", icon: "⚡", color: "text-burgundy font-bold", tag: "PostgreSQL" },
+                { name: "Vercel Edge Global CDN", icon: "▲", color: "text-black font-bold", tag: "Sub-Second TTFB" },
+                { name: "Stripe Verified Payments", icon: "💳", color: "text-[#635bff] font-bold", tag: "PCI-DSS" },
+                { name: "Core Web Vitals (<1.2s)", icon: "⚡", color: "text-amber-700 font-bold", tag: "99+ Score" },
+                { name: "PostgreSQL Database", icon: "🐘", color: "text-[#336791] font-bold", tag: "Enterprise" },
+                { name: "Python & Node.js Engines", icon: "⬢", color: "text-ink font-bold", tag: "Microservices" },
+                { name: "Shopify Plus Headless", icon: "🛍️", color: "text-burgundy font-bold", tag: "E-Commerce" },
+                { name: "Next.js 15 App Router", icon: "▲", color: "text-black font-bold", tag: "React 19" },
+                { name: "TypeScript Strict Mode", icon: "TS", color: "text-[#3178c6] font-bold", tag: "Zero Debt" },
+                { name: "Tailwind CSS Styling", icon: "✦", color: "text-[#38bdf8] font-bold", tag: "Sub-50ms Paint" },
+                { name: "Supabase Cloud Database", icon: "⚡", color: "text-burgundy font-bold", tag: "PostgreSQL" },
+                { name: "Vercel Edge Global CDN", icon: "▲", color: "text-black font-bold", tag: "Sub-Second TTFB" },
+                { name: "Stripe Verified Payments", icon: "💳", color: "text-[#635bff] font-bold", tag: "PCI-DSS" },
+                { name: "Core Web Vitals (<1.2s)", icon: "⚡", color: "text-amber-700 font-bold", tag: "99+ Score" },
+                { name: "PostgreSQL Database", icon: "🐘", color: "text-[#336791] font-bold", tag: "Enterprise" },
+                { name: "Python & Node.js Engines", icon: "⬢", color: "text-ink font-bold", tag: "Microservices" },
+                { name: "Shopify Plus Headless", icon: "🛍️", color: "text-burgundy font-bold", tag: "E-Commerce" },
+              ].map((item, i) => (
+                <div
+                  key={`tech-${item.name}-${i}`}
+                  className="inline-flex items-center gap-2 rounded-full border border-burgundy/15 bg-white/90 px-3.5 py-1.5 shadow-2xs backdrop-blur-md transition-all duration-200 hover:scale-105 hover:border-burgundy/40 hover:bg-white"
+                >
+                  <span className={`text-xs sm:text-sm ${item.color}`}>{item.icon}</span>
+                  <span className="text-xs sm:text-[13px] font-semibold text-ink">{item.name}</span>
+                  <span className="rounded-full bg-burgundy/8 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-burgundy">
+                    {item.tag}
+                  </span>
+                </div>
               ))}
             </div>
           </div>
